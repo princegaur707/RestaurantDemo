@@ -1,0 +1,172 @@
+/*Issues in this:
+*/
+*{
+    font-size:20px;
+    margin:0;/* By default some margin is always there so we generally remove that */
+    padding:0;
+    box-sizing: border-box;/* this box-sizing helps in fixing 
+    the width so that all padding are included in that width only  */
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+    /* how to move while scrolling down the website */
+}
+/* Do till this in every website  */
+ul{
+    list-style-type: none;
+}
+li{
+    display: inline-block;
+}
+li{
+    padding: 0px 2rem;    /* top left  */
+}
+header{
+    position:fixed; /* we don't  want our navbar to change on scrolling or anything else  */
+    top:0px;left:0px;right:0px;    /* to make it attach to top  */
+    display: flex;    /* As we needed to bring all these in one line  */
+    /* align-items: center; */
+    justify-content:space-between;
+    background-color: rgb(201, 163, 113);
+    padding:1rem 10%;
+}
+a{
+    color:black;
+}
+.btn{
+    border-color: red;
+    border-radius: 7px;
+    background-color: red;
+    padding: 5px 5px;
+    transition-property: background-color, border-color;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+}
+.btn:hover{
+    border-color:rgb(165, 47, 47);
+    background-color: rgb(165, 47, 47);
+}
+.fa-bars{
+    border:1px solid black;
+    font-size:1rem;
+    border-radius:5px;
+    padding: 4px 8px;
+    display: none; /* as we don't want to see this icon if screen size is sufficient  */
+}
+.home{
+    display: flex;
+    align-items: center;
+    background-image: url('resources/img5.jpg');
+    max-height:600px;
+}
+.info{
+   max-width: 49%;
+   padding:10rem 9%;
+}
+h2{
+    font-size:2rem;
+    /* two times of html element(set by browser) */
+    padding:2rem 0;
+    /* padding given top also implies bottom directly */
+    /* width: fit-content; */
+}
+.desc{
+    padding:2rem 0; 
+    color: white;  
+}
+.tablebook{
+    font-size: 2rem;
+    font-weight:700;
+    width: fit-content;
+    background-color: rgb(41, 168, 79);
+    border: 3px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    transition-duration: 2s;
+}
+.tablebook:hover{
+    background-color: rgb(76, 134, 76);
+}
+.pic img{/*.pic alone do not worked*/
+    /* max-width: 49%; */
+    /* max-height: 10%; */
+    /* background-clip: border-box; */
+    /* background-size: contain; */
+    border-radius: 50%;
+    margin-top:20px;;
+}
+#about{
+    display: flex;
+    text-align: center;
+}
+#about{
+    min-height: 600px;/*If we would have setted max height content may overflow*/
+    padding: 5rem 0;
+}
+.aboutimg{
+    width: 49%;
+    padding: 0 2rem;
+}
+.aboutdesc{
+    width:49%;
+    padding: 0rem 2rem;
+}
+h1,h2{
+    text-align: center;
+}
+.aboutdesc p{
+    padding: 2rem 0;
+    text-align: justify;    /* For aligning from right side too */
+}
+footer{
+    background-color: rgb(11,11,19);
+    color:white;
+}
+.footcontent{
+    width: 100%;/*so that black background do not removed from corner on size change*/
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:2rem 2rem;
+}
+.myaddress{
+    width: 50%;
+    text-align: justify;
+}
+.right{
+    padding: 2rem 0;
+    text-align: center;
+}
+@media(max-width:920px){
+    #aboutsection{
+        display: block;
+    }
+}
+@media(max-width:830px){
+    .fa-bars{
+        display:block;/* display block means same that inline etc things */
+        /* we will use js for bring all the others things under navbar  */
+        /* for now we are not displaying them */
+    }
+    .navbar{
+        display:none;
+    }
+    .home{
+        display:block;
+    }
+    .info{
+        max-width: 100%;
+    }
+    .pic {
+        display:none;
+    }
+    .aboutimg{
+        width:100%;
+        text-align: center;/*For setting the image at center*/
+    } 
+    .aboutdesc{
+        width:100%; /*so that downward text can occupy whole screen*/
+        padding-top:1rem 0;
+    }
+}
